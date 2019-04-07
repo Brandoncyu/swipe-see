@@ -1,0 +1,146 @@
+{
+    "data": [
+        {
+            "id": "CDG-SEA-DL-35-20190408-ECON",
+            "links": {
+                "score": 8.3,
+                "segments": [
+                    "CDG-SEA-DL-35-20190408-ECON"
+                ]
+            }
+        }
+    ],
+    "linked": {
+        "scores": [
+            {
+                "id": 8.3,
+                "word_score": "Very good"
+            }
+        ],
+        "segments": [
+            {
+                "id": "CDG-SEA-DL-35-20190408-ECON",
+                "mk_flt_no": "35",
+                "links": {
+                    "seat": 18,
+                    "wifi": 337,
+                    "power": 8,
+                    "entertainment": 20,
+                    "fresh_food": 6,
+                    "beverage": 5,
+                    "layout": 19,
+                    "aircraft": 67
+                }
+            }
+        ],
+        "seats": [
+            {
+                "id": 18,
+                "display_text": "Standard legroom (79 cm)",
+                "quality": "standard",
+                "legroom": "standard",
+                "pitch": "31",
+                "width": "wider",
+                "flatness": "not flat",
+                "type": "standard legroom",
+                "updated_at": "2016-07-01T06:09:52Z"
+            }
+        ],
+        "wifis": [
+            {
+                "id": 337,
+                "display_text": "Netflix streaming capable (fee)",
+                "quality": "standard",
+                "performance": "better",
+                "cost": "paid",
+                "exists": "yes",
+                "chance": "full",
+                "coverage": "full",
+                "connectivity_type": "wifi",
+                "type": "wifi",
+                "updated_at": "2018-09-19T12:14:03Z"
+            }
+        ],
+        "powers": [
+            {
+                "id": 8,
+                "display_text": "USB outlet",
+                "quality": "better",
+                "cost": "free",
+                "distribution": "all",
+                "multiple_at_seat": "no",
+                "usb_port": "yes",
+                "exists": "yes",
+                "power_outlet": "no",
+                "chance": "no",
+                "type": "usb",
+                "updated_at": "2016-05-19T05:01:01Z"
+            }
+        ],
+        "entertainments": [
+            {
+                "id": 20,
+                "display_text": "On demand entertainment",
+                "quality": "better",
+                "cost": "free",
+                "exists": "yes",
+                "type": "on-demand",
+                "updated_at": "2018-01-17T01:33:46Z",
+                "offerings": {
+                    "delivery_medium": "in-seat",
+                    "content_type": "avod",
+                    "selection_type": "on-demand"
+                }
+            }
+        ],
+        "fresh_foods": [
+            {
+                "id": 6,
+                "display_text": "Lunch provided",
+                "quality": "standard",
+                "cost": "free",
+                "exists": "yes",
+                "type": "meal",
+                "updated_at": "2019-01-07T01:32:22Z"
+            }
+        ],
+        "beverages": [
+            {
+                "id": 5,
+                "display_text": "Alcohol & beverages provided",
+                "quality": "standard",
+                "type": "alcoholic and nonalcoholic",
+                "alcoholic_cost": "free",
+                "nonalcoholic_cost": "free",
+                "exists": "yes",
+                "updated_at": "2018-06-04T01:18:03Z"
+            }
+        ],
+        "layouts": [
+            {
+                "id": 19,
+                "display_text": "Standard 2-3-2 layout",
+                "quality": "standard",
+                "row_layout": "2-3-2",
+                "direct_aisle_access": "no",
+                "type": "forward",
+                "updated_at": "2016-05-19T05:01:00Z"
+            }
+        ],
+        "aircrafts": [
+            {
+                "id": 67,
+                "display_text": "767 (widebody)",
+                "quality": "standard",
+                "model": "767",
+                "type": "widebody",
+                "cabin_pressure": "normal",
+                "window_size": "standard",
+                "updated_at": "2016-05-31T10:00:47Z"
+            }
+        ]
+    },
+    "meta": {
+        "unmatched_keys": []
+    }
+}
