@@ -12,8 +12,11 @@ import {
 
 const InputForm = ({changeCity, getEvents}) => {
   return(<Container fluid={true}>
+    <h1 id ="swipe">Swipe-See</h1>
     <Row>
-      <Col xl="3"></Col>
+      <Col xl="3">
+
+      </Col>
       <Col>
         <Form onSubmit={getEvents} className="p-4" id="initial-form" >
           <FormGroup>
