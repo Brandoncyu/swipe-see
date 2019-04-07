@@ -31,7 +31,7 @@ const Swipe = ({activities}) => {
                 </Col>
               </Row>
               <Row>
-                <Col xl="7">
+                <Col xs="7">
                   <p>{item.fromPrice}</p>
                   <p>Recommendation Score: {item.recommendationScore}</p>
                 </Col>
