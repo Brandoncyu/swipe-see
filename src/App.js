@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {expediaSeattleAllEvents} from './models/models'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import Swipe from './components/Swipe'
 

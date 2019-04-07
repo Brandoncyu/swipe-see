@@ -8,5 +8,6 @@
 }
 
 .title {
-  display: inline-block
+  display: inline-block;
+  margin-top: 15px
 }
