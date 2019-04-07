@@ -1,34 +1,54 @@
 import React, { Component } from 'react';
-import {expediaSeattleAllEvents} from './models/models'
+import {expediaAllEvents} from './models/models'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import InputForm from './components/InputForm'
 import Swipe from './components/Swipe'
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      activities: []
+      activities: [],
+      destination: 'atlanta',
+      formOn: true
     }
   }
-  componentDidMount = async() => {
-    const response = await expediaSeattleAllEvents()
+
+  changeCity = (e) =>{
     this.setState({
-      activities: response.activities
+      [e.target.name]: e.target.value
     })
-
-
   }
 
+  getEvents = async (e) => {
+    e.preventDefault()
+    const response = await expediaAllEvents(this.state.destination)
+    this.setState({
+      activities: response.activities,
+      formOn: false
+    })
+  }
 
+  backToForm = () =>{
+    this.setState({
+      activities: [],
+      destination: 'atlanta',
+      formOn: true
+    })
+  }
 
   render() {
-    console.log(this.state.activities)
+    console.log(this.state.destination)
     return (
       <div className="App">
+        {this.state.formOn ? <InputForm
+          changeCity={this.changeCity}
+          getEvents={this.getEvents}
+        /> :
         <Swipe
-          activities = {this.state.activities}
-        />
+          activities={this.state.activities}
+          backToForm={this.backToForm}
+        />}
       </div>
     );
   }

@@ -11,3 +11,17 @@
   display: inline-block;
   margin-top: 15px
 }
+
+#initial-form {
+  margin-top: 100px;
+  color: white;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  left: 41%;
+  /*104.5px is half of the button's width*/
+}

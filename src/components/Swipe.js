@@ -5,10 +5,12 @@ import {
   Container,
   Row,
   Col,
+  Button
 } from 'reactstrap'
 
-const Swipe = ({activities}) => {
-  return (
+const Swipe = ({activities, backToForm}) => {
+  return (<div>
+    <Button className="button" color="primary" size="lg" onClick={backToForm}>Look for More Adventures!</Button>
       <CardWrapper>
         {activities.map((item, index) =>
           <Card
@@ -53,7 +55,10 @@ const Swipe = ({activities}) => {
 
           </Card>
         )}
+
       </CardWrapper>
+
+      </div>
   )
 }
 

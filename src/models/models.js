@@ -161,7 +161,7 @@ export const expediaSeattleAllFeatures = async () => {
   }
 }
 
-export const expediaSeattleAllEvents = async () => {
+export const expediaSeattleAllEvents = async (destination) => {
   try {
     const response = await axios.get(`https://apim.expedia.com/x/activities/search`, {
       headers: {
@@ -169,6 +169,23 @@ export const expediaSeattleAllEvents = async () => {
       },
       params: {
         'location': 'Seattle'
+      }
+    })
+    return response.data
+  } catch(e){
+    return false
+  }
+}
+
+
+export const expediaAllEvents = async (destination) => {
+  try {
+    const response = await axios.get(`https://apim.expedia.com/x/activities/search`, {
+      headers: {
+        'key': `4f8ce657-ee06-4527-a8d8-4b207f8f0d62`
+      },
+      params: {
+        'location': destination
       }
     })
     return response.data
