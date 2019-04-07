@@ -21,7 +21,7 @@ const InputForm = ({changeCity, getEvents}) => {
         <Form onSubmit={getEvents} className="p-4" id="initial-form" >
           <FormGroup>
             <Label htmlFor="passport">Passport Number</Label>
-            <Input type="text" name="passport"  />
+            <Input type="text" name="passport" value="C00003549" />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="destination">Destination</Label>
