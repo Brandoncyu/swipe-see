@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 import {expediaSeattleAllEvents} from './models/models'
+
+import Swipe from './components/Swipe'
 
 class App extends Component {
   constructor(props){
@@ -13,7 +13,7 @@ class App extends Component {
   componentDidMount = async() => {
     const response = await expediaSeattleAllEvents()
     this.setState({
-      activities: response.activities.slice(0,10)
+      activities: response.activities
     })
 
 
@@ -25,20 +25,9 @@ class App extends Component {
     console.log(this.state.activities)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Swipe
+          activities = {this.state.activities}
+        />
       </div>
     );
   }
