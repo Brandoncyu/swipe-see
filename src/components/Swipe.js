@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, CardWrapper } from 'react-swipeable-cards';
-import MapComponent from './MapComponent'
 import '../App.css';
 import {
   Container,
@@ -27,19 +26,22 @@ const Swipe = ({activities}) => {
                 </Col>
               </Row>
               <Row className="mt-3">
-                <Col xl="2">
-                  <p>{item.fromPrice}</p>
-                </Col>
-                <Col>
-                  <p>Recommendation Score: {item.recommendationScore}</p>
-                </Col>
-              </Row>
-              <Row>
                 <Col>
                   <p style={{"font-size": "13px"}}>Categories: {item.categories.join(', ')}</p>
                 </Col>
               </Row>
-              <Row className="mt-4">
+              <Row>
+                <Col xl="7">
+                  <p>{item.fromPrice}</p>
+                  <p>Recommendation Score: {item.recommendationScore}</p>
+                </Col>
+                <Col>
+
+                  <a href={`http://maps.google.com/maps?q=${item.latLng.split(',')[0]},${item.latLng.split(',')[1]}`} target="blank"><img style={{"height" : "60px"}} src={require('./google-maps.png')}  alt="location" /></a>
+                  <p style={{"font-size": "10px"}}>View on Google Maps</p>
+                </Col>
+              </Row>
+              <Row className="mt-3">
                 <Col>
                   <img style={{"height" : "40px"}} src={require('./powered-by-expedia.png')} alt="location" />
                 </Col>
