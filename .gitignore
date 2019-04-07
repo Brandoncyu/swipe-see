@@ -11,6 +11,8 @@
 # production
 /build
 
+SwipeSee.mov
+
 # misc
 .DS_Store
 .env.local
