@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {delta, routeHappyEcon, expediaSeattle} from './models/models'
+import {expediaSeattleAllEvents} from './models/models'
 
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      text: ''
+      activities: []
     }
   }
   componentDidMount = async() => {
-    const response = await expediaSeattle()
-    console.log(response)
-    // if (response) {
-    //   this.props.setUser()
-    // }
+    const response = await expediaSeattleAllEvents()
+    this.setState({
+      activities: response.activities.slice(0,10)
+    })
+
+
   }
 
 
 
   render() {
+    console.log(this.state.activities)
     return (
       <div className="App">
         <header className="App-header">

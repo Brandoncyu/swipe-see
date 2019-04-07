@@ -9,8 +9,25 @@ export const delta = async () => {
           'Authorization': `Bearer WpaYasAvJflSZlahNGrF8ozf6AlR`,
           'Content-Type': 'application/x-www-form-urlencoded'
       },
-      data: CDGtoSEA
+      CDGtoSEA
     })
+    return response
+  } catch(e){
+    return false
+  }
+}
+
+export const delta2 = async () => {
+  try {
+    const response = await axios(`https://stage-apigateway.delta.com/NDC/v18.1/AirShopping`, {
+      method: 'POST',
+      headers: {
+          'Authorization': `Bearer WpaYasAvJflSZlahNGrF8ozf6AlR`,
+          'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      CDGtoSEA
+    })
+
     return response
   } catch(e){
     return false
@@ -92,6 +109,25 @@ export const expediaSeattleHotels = async () => {
   }
 }
 
+export const expediaSeattleHotelsSpecificLocations = async () => {
+  try {
+    const response = await axios.get(`https://apim.expedia.com/x/geo/features/178307/features`, {
+      headers: {
+        'key': `4f8ce657-ee06-4527-a8d8-4b207f8f0d62`
+      },
+      params: {
+        within: '.5km',
+        lng: '-122.3464704',
+        lat: '47.645644',
+        type: 'hotel'
+      }
+    })
+    return response
+  } catch(e){
+    return false
+  }
+}
+
 export const expediaSeattlePOI = async () => {
   try {
     const response = await axios.get(`https://apim.expedia.com/x/geo/features/178307/features`, {
@@ -130,9 +166,12 @@ export const expediaSeattleAllEvents = async () => {
     const response = await axios.get(`https://apim.expedia.com/x/activities/search`, {
       headers: {
         'key': `4f8ce657-ee06-4527-a8d8-4b207f8f0d62`
+      },
+      params: {
+        'location': 'Seattle'
       }
     })
-    return response
+    return response.data
   } catch(e){
     return false
   }
