@@ -11,3 +11,44 @@
   display: inline-block;
   margin-top: 15px
 }
+
+#initial-form {
+  margin-top: 20px;
+  color: white;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+#cities-list {
+  margin-top: 50px;
+  color: white;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+#title {
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 25px;
+}
+
+#listGroup {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px
+}
+
+#swipe {
+  font-size: 100px;
+  color: white;
+  /* text-shadow: 2px 2px black; */
+  margin-left: 20px;
+}
+
+.button {
+  position: absolute;
+  bottom: 10px;
+  left: 41%;
+  /*104.5px is half of the button's width*/
+}
