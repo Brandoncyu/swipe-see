@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {delta, routeHappyEcon} from './models/models'
+import {delta, routeHappyEcon, expediaSeattle} from './models/models'
 
 class App extends Component {
   constructor(props){
@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
   componentDidMount = async() => {
-    const response = await routeHappyEcon()
+    const response = await expediaSeattle()
     console.log(response)
     // if (response) {
     //   this.props.setUser()
