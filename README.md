@@ -11,3 +11,4 @@ This is an app that allows you to plan your events well before your vacation, bu
 * [Bootstrap](https://bootstrap.com/) - The css framework used
 * [React](https://reactjs.org/) - Frontend library
 * [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+* [React-Swipe-Card](https://github.com/alexandre-garrec/react-swipe-card/tree/master/src) - a tinder-like react package used to render the cards and the swipe features.
